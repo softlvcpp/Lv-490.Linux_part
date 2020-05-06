@@ -3,4 +3,4 @@ project(Server)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Server src/main.cpp)
+add_executable(Server src/main.cpp src/TCPServer.cpp src/TCPServer.h src/PIDController.cpp src/PIDController.h)

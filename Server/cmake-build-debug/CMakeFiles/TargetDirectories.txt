@@ -1,3 +1,3 @@
 /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir
 /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir

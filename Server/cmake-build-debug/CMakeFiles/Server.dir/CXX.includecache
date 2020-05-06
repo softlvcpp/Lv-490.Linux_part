@@ -6,7 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/danylo/LV490/Lv-490.Linux_part/Server/src/main.cpp
-iostream
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
+string
 -
+string_view
+-
+
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.cpp
+signal.h
+-
+zconf.h
+-
+sys/stat.h
+-
+wait.h
+-
+string.h
+-
+fstream
+-
+PIDController.h
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
+TCPServer.h
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.h
+
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.h
+PIDController.h
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
 

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Server.dir/src/main.cpp.o  -o Server 
+/usr/bin/c++  -g   CMakeFiles/Server.dir/src/main.cpp.o CMakeFiles/Server.dir/src/TCPServer.cpp.o CMakeFiles/Server.dir/src/PIDController.cpp.o  -o Server 
