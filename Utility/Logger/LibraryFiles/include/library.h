@@ -1,0 +1,6 @@
+#ifndef LOGGERLIBRARY_LIBRARY_H
+#define LOGGERLIBRARY_LIBRARY_H
+
+void hello();
+
+#endif //LOGGERLIBRARY_LIBRARY_H
