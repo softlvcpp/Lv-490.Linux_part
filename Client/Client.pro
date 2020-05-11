@@ -18,13 +18,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     ClientSysInfo.cpp \
+    QTcpClientSocket.cpp \
     SettingsWindow.cpp \
     main.cpp \
     Client.cpp
 
 HEADERS += \
     Client.h \
+    ClientSocket.h \
     ClientSysInfo.h \
+    QTcpClientSocket.h \
     SettingsWindow.h
 
 FORMS += \

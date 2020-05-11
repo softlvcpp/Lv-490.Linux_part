@@ -9,9 +9,9 @@
 #include<qlayout.h>
 //#include"DefineLogger.h"
 //#include "../Utility/XML_Parser/XML_Parser.h"
-#include<thread>
 int numff = 0;
 #include <QImageReader>
+//#include "../Utility/Logger/LoggerSHARED.h"
 enum ComboBoxOptions
 {
     AllSystemInformation,
@@ -45,8 +45,7 @@ Client::Client(QWidget* parent)
 //	client_info2.CalculateProcesses();
 
     tmr = new QTimer(this); //for socket conection
-    //connect(tmr, SIGNAL(timeout()), this, SLOT(updateTime()));
-    connect(tmr, SIGNAL(timeout()), this, SLOT(runUpdateTime()));
+    connect(tmr, SIGNAL(timeout()), this, SLOT(SendToServerThread()));
     tmr->start();
 
     connect(ui.comboBox, SIGNAL(currentIndexChanged(int)),	this, SLOT(indexComboChanged(int))); //signal for changed combo
@@ -67,11 +66,10 @@ void Client::closeEvent(QCloseEvent* event) {
 
 };
 
-void Client::runUpdateTime()
+void Client::SendToServerThread()
 {
     const unsigned int TimeMeasurement = 1000; // 1000- seconds, 1 = milliseconds, 60000 - minuts...;
-tmr->setInterval(3 * TimeMeasurement);
-    //tmr->setInterval(settings.get_TimeInterval() * TimeMeasurement); // set time interval
+    tmr->setInterval(settings.get_TimeInterval() * TimeMeasurement); // set time interval
     if (m_th != nullptr)
     {
         if (m_th->joinable())
@@ -80,12 +78,75 @@ tmr->setInterval(3 * TimeMeasurement);
         }
         delete m_th;
     }
-    m_th = new std::thread(&Client::updateTime, this);
+    m_th = new std::thread(&Client::SendToServer, this);
 }
 
-void Client::updateTime()
+bool Client::SendToServer()
 {
-    //
+    QScopedPointer<ClientSocket> socket(new QTcpClientSocket());
+        if (socket->Init(settings.get_IP().toStdString(), settings.get_port()))
+        {
+
+            //L_TRACE << "Client socket inited.";
+            qDebug()<< "Client socket inited.";
+
+        }
+        else
+        {
+            //L_TRACE << "Client socket doesn`t inited.";
+            qDebug() << "Client socket doesn`t inited.";
+            return false;
+        }
+
+        if (socket->Connect()) //connect to host
+        {
+
+            //L_TRACE << "Client connected to server.";
+            qDebug() << "Client connected to server.";
+        }
+        else
+        {
+            qDebug() << "Client doesn`t connect to server.";
+            qDebug() << socket->LastError().c_str();
+            //L_TRACE << "Client doesn`t connect to server.";
+            //L_TRACE << socket->LastError().c_str();
+            return false;
+        }
+
+        client_info2.Update();
+        string send_XML_string;
+        //client_info.Parse(send_XML_string);// parse in XML string
+        //L_TRACE << "XML string: ";
+        //L_TRACE << send_XML_string.c_str();
+        qDebug() << send_XML_string.c_str();
+        if (socket->Send(send_XML_string)) //send information
+        {
+            qDebug() << "Client sent information.";
+            //L_TRACE << "Client sent information.";
+        }
+        else
+        {
+            qDebug() << "Client doesn`t send information.";
+            qDebug() << socket->LastError().c_str();
+            //L_TRACE << socket->LastError().c_str();
+            //L_TRACE << "Client doesn`t send information.";
+
+            return false;
+        }if (socket->Disconnect()) //disconnect to host, cloce socket
+        {
+            qDebug() << "Client diconnect to server.";
+            //L_TRACE << "Client diconnect to server.";
+        }
+        else
+        {
+
+           // L_TRACE << "Client doesn`t diconnect to server.";
+           // L_TRACE << socket->LastError().c_str();
+            qDebug() << "Client doesn`t diconnect to server.";
+            qDebug() << socket->LastError().c_str();
+            return false;
+        }
+        return true;
 }
 
 void Client::UpdateProccesThread()

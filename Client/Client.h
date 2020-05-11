@@ -5,7 +5,7 @@
 //#include"SettingsWindow.h"
 #include"ClientSysInfo.h"
 #include<qmenubar.h>
-//#include"QTcpClientSocket.h"
+#include"QTcpClientSocket.h"
 #include <thread>
 #include "SettingsWindow.h"
 //some constants
@@ -28,14 +28,12 @@ private:
     QTimer* timer;//for processes
 
     std::thread* m_th=nullptr;
-    //std::thread* m_th2;
-    //std::thread m_th2;
 public slots:
     void closeEvent(QCloseEvent* event);//performed by pressing the red cross button
-    void runUpdateTime();// runs updateTime() in a separate thread
+    void SendToServerThread();// runs SendToServer() in a separate thread
     void UpdateProccesThread();//runs update_processes in a thread
     void open_settings();
     void indexComboChanged(int index);
-    void updateTime(); //slot for updating function(connection to server)
+    bool SendToServer(); //slot for updating function(connection to server)
     void UpdateProcesses();//update list of processes
 };

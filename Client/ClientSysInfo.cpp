@@ -3,7 +3,6 @@
 #include <QApplication>
 #include <QStorageInfo>
 #include <experimental/filesystem>
-#include <QNetworkInterface>
 
 
 #include "sys/types.h"
@@ -20,7 +19,6 @@
 
 #include <fstream>
 
-#include <QApplication>
 #include <qdebug.h>
 #include <QSysInfo>
 #include <QNetworkInterface>
@@ -33,12 +31,15 @@
 #include <ctype.h>
 #include <algorithm>
 #include <QHostAddress>
-
+#include <QtNetwork>
 
 #include <dirent.h>
 
 
 namespace fs = std::experimental::filesystem;
+
+const std::string FIRST_PART_ROTATION_PATH = "/sys/block/";
+const std::string SECOND_PART_ROTATION_PATH = "/queue/rotational";
 
 ClientSysInfo::ClientSysInfo() {
     Update();
@@ -78,13 +79,6 @@ if (os_name == "windows") {
     }
 
 }
-
-
-
-
-
-
-
 
 string ClientSysInfo::get_os() const
 {
@@ -150,37 +144,6 @@ map<int, string> ClientSysInfo::get_processes() const
 {
     return m_client_info.get_processes();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -253,11 +216,6 @@ void ClientSysInfo::CalculateCPUInfo(){
         }
 }
 
-
-
-
-
-
 int ClientSysInfo::CalculateCapacity(const QStorageInfo& logic_drive) {
 
     int size_in_GB = logic_drive.bytesTotal() / 1024 / 1024 / 1024;
@@ -273,10 +231,7 @@ int ClientSysInfo::CalculateFreeSpace(const QStorageInfo& logic_drive)
     return size_in_GB;
 }
 std::string ClientSysInfo::CalculateHardDisk_MediaType(string LogicalDisk)
-//string ClientSysInfo::CalculateHardDisk_MediaType(string LogicalDisk)
 {
-    const std::string FIRST_PART_ROTATION_PATH = "/sys/block/";
-    const std::string SECOND_PART_ROTATION_PATH = "/queue/rotational";
     std::string path = FIRST_PART_ROTATION_PATH;
     path += LogicalDisk.substr(LogicalDisk.find("sd"), 3);
     path += SECOND_PART_ROTATION_PATH;
@@ -286,10 +241,8 @@ std::string ClientSysInfo::CalculateHardDisk_MediaType(string LogicalDisk)
         qDebug()<<"EROOR rotational.is_open()";
         return "";
     }
-    string l;
-    char is_hdd = 0;
+    bool is_hdd = 0;
     rotational >> is_hdd;
-      qDebug()<<"HERREEEEE="+QString(is_hdd);
     return (is_hdd ? "HDD" : "SSD");
 
 }
@@ -315,18 +268,10 @@ void ClientSysInfo::CalculatevectorLogicDick(std::vector<std::string>& disks,
             hard_disk_total_size.push_back(CalculateCapacity(listVolumes[i]));
             hard_disk_free.push_back(CalculateFreeSpace(listVolumes[i]));
             hard_disk_used.push_back(hard_disk_total_size.back() - hard_disk_free.back());
-
-            //qDebug()<<listVolumes[i].device().toStdString().c_str();
         }
     }
 }
 
-
-
-
-
-#include <QtNetwork>
-#include <QNetworkInterface>
 std::string ClientSysInfo::CalculateMacAddress()
 {
     QNetworkInterface res;
@@ -335,7 +280,6 @@ std::string ClientSysInfo::CalculateMacAddress()
         if (list[i].type() == QNetworkInterface::Ethernet || list[i].type() == QNetworkInterface::Wifi)
         {
             if (list[i].flags().testFlag(QNetworkInterface::IsRunning)) {
-                //qDebug()<<list[i].hardwareAddress();
                 res = list[i];
                 break;
             }
@@ -362,21 +306,9 @@ std::string ClientSysInfo::CalculateIPAddress()
     return res.toStdString();
 }
 
-
-
-
-
-
-
-//std::map <int, string> m_processes;
-
-
 int ClientSysInfo::CalculateCPUNumbers() {
-    //return boost::thread::physical_concurrency(); if have boost
     return  get_nprocs_conf();
 }
-
-
 
 std::vector<int> Pids() {
   std::vector<int> pids;
