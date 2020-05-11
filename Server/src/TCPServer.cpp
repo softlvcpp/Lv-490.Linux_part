@@ -12,6 +12,11 @@
 
 bool TCPServer::Start()
 {
+    //If the daemon is currently running
+    if(m_pid_controller.ReadPIDFromFile() != -1)
+    {
+        Stop();
+    }
     if(!Daemonize())
     {
         //Log that cannot start
@@ -33,6 +38,11 @@ bool TCPServer::Stop()
        //Log that cannot terminate the daemon
        return false;
     }
+    if(!m_pid_controller.DeletePIDFile())
+    {
+        // Log that could not delete the file
+        // This error is not crucial.
+    }
     // Log that successfully terminated
     return true;
 }
@@ -47,6 +57,7 @@ bool TCPServer::Restart()
     {
         return false;
     }
+    //Log that service restarted
     return true;
 }
 
@@ -55,7 +66,7 @@ void TCPServer::DaemonMain()
     //Олег, тут пиши код сервера.
     std::ofstream ofs("/home/danylo/file.txt");
     ofs << "hello from daemon";
-
+    while(true);
 }
 
 bool TCPServer::Daemonize()
@@ -76,91 +87,40 @@ bool TCPServer::Daemonize()
         umask(0);
         setsid();
         chdir("/");
-        int status = MonitorProcess();
-        return status;
+        if(!RunDaemon())
+        {
+            // Log that cannot run daemon
+            return false;
+        }
     }
     else
     {
-        return 0;
+        return true;
     }
-
-
-
 }
 
-bool TCPServer::MonitorProcess()
+bool TCPServer::RunDaemon()
 {
-    bool need_start{true};
-    sigset_t sigset;
-    siginfo_t siginfo;
-
-    sigemptyset(&sigset);
-    sigaddset(&sigset, SIGQUIT);
-    sigaddset(&sigset, SIGINT);
-    sigaddset(&sigset, SIGTERM);
-    sigaddset(&sigset, SIGCHLD);
-    sigaddset(&sigset, SIGUSR1);
-    sigprocmask(SIG_BLOCK, &sigset, NULL);
-
-    close(STDIN_FILENO);
-    close(STDOUT_FILENO);
-    close(STDERR_FILENO);
-
-    if(!m_pid_controller.SavePIDToFile())
-    {
-        //LOG, but the program can keep working
-    }
+//    close(STDIN_FILENO);
+//    close(STDOUT_FILENO);
+//    close(STDERR_FILENO);
 
     pid_t pid;
-    int status;
-    while(true)
-    {
-        if (need_start)
-        {
-            pid = fork();
-        }
-        need_start = true;
-        if(pid == -1)
-        {
-            //GLOG_T
-            return false;
-        }
-        else if(pid == 0)
-        {
-            DaemonMain();
-        }
-        else
-        {
-            sigwaitinfo(&sigset, &siginfo);
-            if (siginfo.si_signo == SIGCHLD)
-            {
-                wait(&status);
-                status = WEXITSTATUS(status);
 
-                if (status == CHILD_MUST_TERMINATE)
-                {
-                    // Log that daemon terminated
-                    break;
-                }
-                else if (status == CHILD_MUST_RESTART)
-                {
-                    // Log that child must restart
-                }
-            }
-            else if (siginfo.si_signo == SIGUSR1)
-            {
-                kill(pid, SIGUSR1);
-                need_start = 0;
-            }
-            else
-            {
-                // Log the signal that just came, using strsignal(siginfo.si_signo)
-                kill(pid, SIGTERM);
-                status = 0;
-                break;
-            }
-        }
+    pid = fork();
+
+    if (pid == -1)
+    {
+        // Log that cannot fork
+        return false;
     }
-    //Log that the daemon monitor stopped working
+    else if (pid == 0)
+    {
+        if (!m_pid_controller.SavePIDToFile())
+        {
+            //LOG, but the program can keep working
+        }
+        DaemonMain();
+    }
     return true;
 }

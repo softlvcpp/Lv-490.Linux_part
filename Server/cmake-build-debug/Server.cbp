@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/danylo/LV490/Lv-490.Linux_part/Server/src/IDaemon.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="/home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.cpp">
 			<Option target="Server"/>
 		</Unit>

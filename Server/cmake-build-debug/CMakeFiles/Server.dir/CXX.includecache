@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/IDaemon.h
+
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.cpp
+memory
+-
+climits
+-
+fstream
+-
+zconf.h
+-
+libgen.h
+-
+PIDController.h
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
+
 /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
 string
 -
@@ -33,4 +49,14 @@ TCPServer.h
 /home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.h
 PIDController.h
 /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
+IDaemon.h
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/IDaemon.h
+
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/main.cpp
+cstring
+-
+algorithm
+-
+TCPServer.h
+/home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.h
 

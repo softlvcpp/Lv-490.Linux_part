@@ -12,11 +12,11 @@
 class PIDController
 {
     const std::string m_filename{"/daemon_pid.pid"};
-
-    std::string GetFilePath()const;
+    std::string get_file_path()const;
 public:
     [[nodiscard]] pid_t ReadPIDFromFile()const;
     [[nodiscard]] bool SavePIDToFile()const;
+    [[nodiscard]] bool DeletePIDFile()const;
 };
 
 

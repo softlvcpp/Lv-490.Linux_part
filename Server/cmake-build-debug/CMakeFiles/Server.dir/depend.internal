@@ -5,10 +5,12 @@ CMakeFiles/Server.dir/src/PIDController.cpp.o
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.cpp
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
 CMakeFiles/Server.dir/src/TCPServer.cpp.o
+ /home/danylo/LV490/Lv-490.Linux_part/Server/src/IDaemon.h
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.cpp
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.h
 CMakeFiles/Server.dir/src/main.cpp.o
+ /home/danylo/LV490/Lv-490.Linux_part/Server/src/IDaemon.h
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.h
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.h
  /home/danylo/LV490/Lv-490.Linux_part/Server/src/main.cpp

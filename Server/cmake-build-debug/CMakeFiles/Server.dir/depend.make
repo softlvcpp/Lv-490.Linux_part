@@ -4,10 +4,12 @@
 CMakeFiles/Server.dir/src/PIDController.cpp.o: ../src/PIDController.cpp
 CMakeFiles/Server.dir/src/PIDController.cpp.o: ../src/PIDController.h
 
+CMakeFiles/Server.dir/src/TCPServer.cpp.o: ../src/IDaemon.h
 CMakeFiles/Server.dir/src/TCPServer.cpp.o: ../src/PIDController.h
 CMakeFiles/Server.dir/src/TCPServer.cpp.o: ../src/TCPServer.cpp
 CMakeFiles/Server.dir/src/TCPServer.cpp.o: ../src/TCPServer.h
 
+CMakeFiles/Server.dir/src/main.cpp.o: ../src/IDaemon.h
 CMakeFiles/Server.dir/src/main.cpp.o: ../src/PIDController.h
 CMakeFiles/Server.dir/src/main.cpp.o: ../src/TCPServer.h
 CMakeFiles/Server.dir/src/main.cpp.o: ../src/main.cpp
