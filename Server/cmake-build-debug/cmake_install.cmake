@@ -1,4 +1,4 @@
-# Install script for directory: /home/danylo/LV490/Lv-490.Linux_part/Server
+# Install script for directory: /home/oleh/Desktop/Lv-490.Linux_part/Server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

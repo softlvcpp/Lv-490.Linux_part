@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/112/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/oleh/Desktop/clion-2020.1.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/oleh/Desktop/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danylo/LV490/Lv-490.Linux_part/Server
+CMAKE_SOURCE_DIR = /home/oleh/Desktop/Lv-490.Linux_part/Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Server.dir/depend.make
@@ -59,48 +59,118 @@ include CMakeFiles/Server.dir/flags.make
 
 CMakeFiles/Server.dir/src/main.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/main.cpp.o -c /home/danylo/LV490/Lv-490.Linux_part/Server/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/main.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/main.cpp
 
 CMakeFiles/Server.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danylo/LV490/Lv-490.Linux_part/Server/src/main.cpp > CMakeFiles/Server.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/main.cpp > CMakeFiles/Server.dir/src/main.cpp.i
 
 CMakeFiles/Server.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danylo/LV490/Lv-490.Linux_part/Server/src/main.cpp -o CMakeFiles/Server.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/main.cpp -o CMakeFiles/Server.dir/src/main.cpp.s
 
 CMakeFiles/Server.dir/src/TCPServer.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/src/TCPServer.cpp.o: ../src/TCPServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/src/TCPServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/TCPServer.cpp.o -c /home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/src/TCPServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/TCPServer.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/TCPServer.cpp
 
 CMakeFiles/Server.dir/src/TCPServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/TCPServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.cpp > CMakeFiles/Server.dir/src/TCPServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/TCPServer.cpp > CMakeFiles/Server.dir/src/TCPServer.cpp.i
 
 CMakeFiles/Server.dir/src/TCPServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/TCPServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.cpp -o CMakeFiles/Server.dir/src/TCPServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/TCPServer.cpp -o CMakeFiles/Server.dir/src/TCPServer.cpp.s
 
 CMakeFiles/Server.dir/src/PIDController.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/src/PIDController.cpp.o: ../src/PIDController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/src/PIDController.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/PIDController.cpp.o -c /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/src/PIDController.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/PIDController.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/PIDController.cpp
 
 CMakeFiles/Server.dir/src/PIDController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/PIDController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.cpp > CMakeFiles/Server.dir/src/PIDController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/PIDController.cpp > CMakeFiles/Server.dir/src/PIDController.cpp.i
 
 CMakeFiles/Server.dir/src/PIDController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/PIDController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.cpp -o CMakeFiles/Server.dir/src/PIDController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/PIDController.cpp -o CMakeFiles/Server.dir/src/PIDController.cpp.s
+
+CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o: ../src/ConnectionAcceptor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ConnectionAcceptor.cpp
+
+CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ConnectionAcceptor.cpp > CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.i
+
+CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ConnectionAcceptor.cpp -o CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.s
+
+CMakeFiles/Server.dir/src/EventHandler.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/EventHandler.cpp.o: ../src/EventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Server.dir/src/EventHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/EventHandler.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/EventHandler.cpp
+
+CMakeFiles/Server.dir/src/EventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/EventHandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/EventHandler.cpp > CMakeFiles/Server.dir/src/EventHandler.cpp.i
+
+CMakeFiles/Server.dir/src/EventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/EventHandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/EventHandler.cpp -o CMakeFiles/Server.dir/src/EventHandler.cpp.s
+
+CMakeFiles/Server.dir/src/ReactorInterface.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/ReactorInterface.cpp.o: ../src/ReactorInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Server.dir/src/ReactorInterface.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/ReactorInterface.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorInterface.cpp
+
+CMakeFiles/Server.dir/src/ReactorInterface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/ReactorInterface.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorInterface.cpp > CMakeFiles/Server.dir/src/ReactorInterface.cpp.i
+
+CMakeFiles/Server.dir/src/ReactorInterface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/ReactorInterface.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorInterface.cpp -o CMakeFiles/Server.dir/src/ReactorInterface.cpp.s
+
+CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o: ../src/ReactorSelectImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorSelectImpl.cpp
+
+CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorSelectImpl.cpp > CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.i
+
+CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorSelectImpl.cpp -o CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.s
+
+CMakeFiles/Server.dir/src/select.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/select.cpp.o: ../src/select.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Server.dir/src/select.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/select.cpp.o -c /home/oleh/Desktop/Lv-490.Linux_part/Server/src/select.cpp
+
+CMakeFiles/Server.dir/src/select.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/select.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleh/Desktop/Lv-490.Linux_part/Server/src/select.cpp > CMakeFiles/Server.dir/src/select.cpp.i
+
+CMakeFiles/Server.dir/src/select.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/select.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleh/Desktop/Lv-490.Linux_part/Server/src/select.cpp -o CMakeFiles/Server.dir/src/select.cpp.s
 
 # Object files for target Server
 Server_OBJECTS = \
 "CMakeFiles/Server.dir/src/main.cpp.o" \
 "CMakeFiles/Server.dir/src/TCPServer.cpp.o" \
-"CMakeFiles/Server.dir/src/PIDController.cpp.o"
+"CMakeFiles/Server.dir/src/PIDController.cpp.o" \
+"CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o" \
+"CMakeFiles/Server.dir/src/EventHandler.cpp.o" \
+"CMakeFiles/Server.dir/src/ReactorInterface.cpp.o" \
+"CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o" \
+"CMakeFiles/Server.dir/src/select.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
@@ -108,9 +178,14 @@ Server_EXTERNAL_OBJECTS =
 Server: CMakeFiles/Server.dir/src/main.cpp.o
 Server: CMakeFiles/Server.dir/src/TCPServer.cpp.o
 Server: CMakeFiles/Server.dir/src/PIDController.cpp.o
+Server: CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o
+Server: CMakeFiles/Server.dir/src/EventHandler.cpp.o
+Server: CMakeFiles/Server.dir/src/ReactorInterface.cpp.o
+Server: CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o
+Server: CMakeFiles/Server.dir/src/select.cpp.o
 Server: CMakeFiles/Server.dir/build.make
 Server: CMakeFiles/Server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +198,6 @@ CMakeFiles/Server.dir/clean:
 .PHONY : CMakeFiles/Server.dir/clean
 
 CMakeFiles/Server.dir/depend:
-	cd /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/danylo/LV490/Lv-490.Linux_part/Server /home/danylo/LV490/Lv-490.Linux_part/Server /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oleh/Desktop/Lv-490.Linux_part/Server /home/oleh/Desktop/Lv-490.Linux_part/Server /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Server.dir/depend
 

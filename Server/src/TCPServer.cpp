@@ -1,14 +1,25 @@
+#define TIMEOUT  2
+#define  HOST "localhost"
+#define  PORT "8080"
+
 #include <signal.h>
-#include <zconf.h>
+//#include <zconf.h>
 #include <sys/stat.h>
 #include <wait.h>
 #include <string.h>
 
 //temp
 #include <fstream>
+#include <thread>
+#include <unistd.h>
 
 #include "PIDController.h"
 #include "TCPServer.h"
+#include "ConnectionAcceptor.h"
+#include "ReactorInterface.h"
+#include "ReactorSelectImpl.h"
+
+
 
 bool TCPServer::Start()
 {
@@ -63,10 +74,14 @@ bool TCPServer::Restart()
 
 void TCPServer::DaemonMain()
 {
-    //Олег, тут пиши код сервера.
-    std::ofstream ofs("/home/danylo/file.txt");
-    ofs << "hello from daemon";
-    while(true);
+    auto traffic_manager = std::make_shared<reactor::ReactorSelectImpl>();
+    traffic_manager->set_timeout(TIMEOUT);
+
+    ConnectionAcceptor connection_acceptor{HOST, PORT, traffic_manager};
+    std::thread acceptor_thread(connection_acceptor);
+    std::thread manager_thread(*traffic_manager);
+    acceptor_thread.join();
+    manager_thread.join();
 }
 
 bool TCPServer::Daemonize()

@@ -4,9 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/danylo/LV490/Lv-490.Linux_part/Server/src/PIDController.cpp" "/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/PIDController.cpp.o"
-  "/home/danylo/LV490/Lv-490.Linux_part/Server/src/TCPServer.cpp" "/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/TCPServer.cpp.o"
-  "/home/danylo/LV490/Lv-490.Linux_part/Server/src/main.cpp" "/home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/main.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/ConnectionAcceptor.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/EventHandler.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/EventHandler.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/PIDController.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/PIDController.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorInterface.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/ReactorInterface.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/ReactorSelectImpl.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/TCPServer.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/TCPServer.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/main.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/main.cpp.o"
+  "/home/oleh/Desktop/Lv-490.Linux_part/Server/src/select.cpp" "/home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/Server.dir/src/select.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

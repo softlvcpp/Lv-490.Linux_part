@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/112/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/oleh/Desktop/clion-2020.1.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/oleh/Desktop/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danylo/LV490/Lv-490.Linux_part/Server
+CMAKE_SOURCE_DIR = /home/oleh/Desktop/Lv-490.Linux_part/Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/112/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/oleh/Desktop/clion-2020.1.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/112/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/oleh/Desktop/clion-2020.1.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danylo/LV490/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oleh/Desktop/Lv-490.Linux_part/Server/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,60 @@ Server/fast:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
+src/ConnectionAcceptor.o: src/ConnectionAcceptor.cpp.o
+
+.PHONY : src/ConnectionAcceptor.o
+
+# target to build an object file
+src/ConnectionAcceptor.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.o
+.PHONY : src/ConnectionAcceptor.cpp.o
+
+src/ConnectionAcceptor.i: src/ConnectionAcceptor.cpp.i
+
+.PHONY : src/ConnectionAcceptor.i
+
+# target to preprocess a source file
+src/ConnectionAcceptor.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.i
+.PHONY : src/ConnectionAcceptor.cpp.i
+
+src/ConnectionAcceptor.s: src/ConnectionAcceptor.cpp.s
+
+.PHONY : src/ConnectionAcceptor.s
+
+# target to generate assembly for a file
+src/ConnectionAcceptor.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ConnectionAcceptor.cpp.s
+.PHONY : src/ConnectionAcceptor.cpp.s
+
+src/EventHandler.o: src/EventHandler.cpp.o
+
+.PHONY : src/EventHandler.o
+
+# target to build an object file
+src/EventHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/EventHandler.cpp.o
+.PHONY : src/EventHandler.cpp.o
+
+src/EventHandler.i: src/EventHandler.cpp.i
+
+.PHONY : src/EventHandler.i
+
+# target to preprocess a source file
+src/EventHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/EventHandler.cpp.i
+.PHONY : src/EventHandler.cpp.i
+
+src/EventHandler.s: src/EventHandler.cpp.s
+
+.PHONY : src/EventHandler.s
+
+# target to generate assembly for a file
+src/EventHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/EventHandler.cpp.s
+.PHONY : src/EventHandler.cpp.s
+
 src/PIDController.o: src/PIDController.cpp.o
 
 .PHONY : src/PIDController.o
@@ -149,6 +203,60 @@ src/PIDController.s: src/PIDController.cpp.s
 src/PIDController.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/PIDController.cpp.s
 .PHONY : src/PIDController.cpp.s
+
+src/ReactorInterface.o: src/ReactorInterface.cpp.o
+
+.PHONY : src/ReactorInterface.o
+
+# target to build an object file
+src/ReactorInterface.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ReactorInterface.cpp.o
+.PHONY : src/ReactorInterface.cpp.o
+
+src/ReactorInterface.i: src/ReactorInterface.cpp.i
+
+.PHONY : src/ReactorInterface.i
+
+# target to preprocess a source file
+src/ReactorInterface.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ReactorInterface.cpp.i
+.PHONY : src/ReactorInterface.cpp.i
+
+src/ReactorInterface.s: src/ReactorInterface.cpp.s
+
+.PHONY : src/ReactorInterface.s
+
+# target to generate assembly for a file
+src/ReactorInterface.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ReactorInterface.cpp.s
+.PHONY : src/ReactorInterface.cpp.s
+
+src/ReactorSelectImpl.o: src/ReactorSelectImpl.cpp.o
+
+.PHONY : src/ReactorSelectImpl.o
+
+# target to build an object file
+src/ReactorSelectImpl.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.o
+.PHONY : src/ReactorSelectImpl.cpp.o
+
+src/ReactorSelectImpl.i: src/ReactorSelectImpl.cpp.i
+
+.PHONY : src/ReactorSelectImpl.i
+
+# target to preprocess a source file
+src/ReactorSelectImpl.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.i
+.PHONY : src/ReactorSelectImpl.cpp.i
+
+src/ReactorSelectImpl.s: src/ReactorSelectImpl.cpp.s
+
+.PHONY : src/ReactorSelectImpl.s
+
+# target to generate assembly for a file
+src/ReactorSelectImpl.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/ReactorSelectImpl.cpp.s
+.PHONY : src/ReactorSelectImpl.cpp.s
 
 src/TCPServer.o: src/TCPServer.cpp.o
 
@@ -204,6 +312,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/select.o: src/select.cpp.o
+
+.PHONY : src/select.o
+
+# target to build an object file
+src/select.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/select.cpp.o
+.PHONY : src/select.cpp.o
+
+src/select.i: src/select.cpp.i
+
+.PHONY : src/select.i
+
+# target to preprocess a source file
+src/select.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/select.cpp.i
+.PHONY : src/select.cpp.i
+
+src/select.s: src/select.cpp.s
+
+.PHONY : src/select.s
+
+# target to generate assembly for a file
+src/select.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/select.cpp.s
+.PHONY : src/select.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,15 +348,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Server"
+	@echo "... src/ConnectionAcceptor.o"
+	@echo "... src/ConnectionAcceptor.i"
+	@echo "... src/ConnectionAcceptor.s"
+	@echo "... src/EventHandler.o"
+	@echo "... src/EventHandler.i"
+	@echo "... src/EventHandler.s"
 	@echo "... src/PIDController.o"
 	@echo "... src/PIDController.i"
 	@echo "... src/PIDController.s"
+	@echo "... src/ReactorInterface.o"
+	@echo "... src/ReactorInterface.i"
+	@echo "... src/ReactorInterface.s"
+	@echo "... src/ReactorSelectImpl.o"
+	@echo "... src/ReactorSelectImpl.i"
+	@echo "... src/ReactorSelectImpl.s"
 	@echo "... src/TCPServer.o"
 	@echo "... src/TCPServer.i"
 	@echo "... src/TCPServer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/select.o"
+	@echo "... src/select.i"
+	@echo "... src/select.s"
 .PHONY : help
 
 
